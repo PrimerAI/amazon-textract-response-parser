@@ -7,7 +7,7 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
-requirements = ['boto3', 'marshmallow==3.14.1']
+requirements = ['boto3', 'marshmallow==3.15.0']
 
 if sys.argv[-1] == 'publish-test':
     os.system(f"cd {os.path.dirname(__file__)}")
@@ -29,7 +29,7 @@ if sys.argv[-1] == 'publish':
 setup(
     name='amazon-textract-response-parser',
     packages=['trp', 'a2i'],
-    version='0.1.28',
+    version='0.1.28.dev0',
     description='Easily parse JSON returned by Amazon Textract.',
     install_requires=requirements,
     scripts=['bin/amazon-textract-pipeline'],
@@ -37,7 +37,7 @@ setup(
     long_description=read('README.md'),
     author='Amazon Rekognition Textract Demoes',
     author_email='rekognition-textract-demos@amazon.com',
-    url='https://github.com/aws-samples/amazon-textract-response-parser',
+    url='https://github.com/PrimerAI/amazon-textract-response-parser',
     keywords=
     'amazon-textract-response-parser trp aws amazon textract ocr response parser',
     license="Apache License Version 2.0",
@@ -45,7 +45,6 @@ setup(
         "Development Status :: 4 - Beta",
         "Topic :: Utilities",
         'License :: OSI Approved :: Apache Software License',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
